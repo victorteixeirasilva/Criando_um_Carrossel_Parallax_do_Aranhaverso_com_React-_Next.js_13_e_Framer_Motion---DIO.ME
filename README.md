@@ -14,3 +14,8 @@ Este é o repositório do projeto Spider-Verse, desenvolvido durante uma live no
 - [ESLint](https://eslint.org)
 - [Framer Motion](https://www.framer.com/api/motion)
 - [SASS](https://sass-lang.com)
+
+## 📚 Materiais
+- [Material de apoio com tutorial completo](https://micheleambrosio.notion.site/Live-Criando-um-carrossel-parallax-do-Aranhaverso-com-React-Next-js-13-e-Framer-Motion-67a818e32c2049d39d28ce4a185555c4?pvs=4)
+- [Assets](https://drive.google.com/drive/folders/150O6eEhs8oGaHMMss7_CYG2jnI7yMugO?usp=sharing) (arquivos de imagens e efeitos sonoros)
+- [Protótipo no Figma](https://www.figma.com/file/rgHS7o5MyTAxk9vCRH5YhL/Landpage-%2B-Mobile---SpiderVerse?type=design&node-id=0%3A1&mode=design&t=5SFRyEJyIbhD90Sl-1)
