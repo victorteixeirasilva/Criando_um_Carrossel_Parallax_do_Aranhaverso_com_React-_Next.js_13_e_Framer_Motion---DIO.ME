@@ -29,9 +29,15 @@ export default function HeroesList({ heroes }: IProps) {
                 transition={{ duration: 2}}
             >
                 {heroes.map((hero) => (
-                    <div key={hero.id} className={`${styles.imageContainer} ${styles[hero.id]}`}>
+                    <motion.div 
+                        key={hero.id} 
+                        className={`${styles.imageContainer} ${styles[hero.id]}`}
+                        whileHover={{ scale: 1.3 }}
+                        whileTap={{ scale: 0.8}}
+                        transition={{ duration: 0.5 }}
+                    >
                         <HeroesPicture hero={hero} />
-                    </div>
+                    </motion.div>
                 ) )}
             </motion.section>
         </>
