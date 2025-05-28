@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import "./globals.scss";
+import Link from "next/link";
 
 /*import { Geist, Geist_Mono } from "next/font/google";
 
@@ -30,19 +31,21 @@ export default function RootLayout({
       <body>
         <header>
           <Image 
-            src="./icons/menu.svg" 
+            src="/icons/menu.svg" 
             alt="Opções de menu" 
             width={36}
             height={25}
           />
+          <Link href={"/"}>
+            <Image 
+              src="/spider-logo.svg" 
+              alt="Spiderman" 
+              width={260}
+              height={70}
+            />
+          </Link>
           <Image 
-            src="./spider-logo.svg" 
-            alt="Spiderman" 
-            width={260}
-            height={70}
-          />
-          <Image 
-            src="./icons/user.svg" 
+            src="/icons/user.svg" 
             alt="Login" 
             width={36}
             height={36}

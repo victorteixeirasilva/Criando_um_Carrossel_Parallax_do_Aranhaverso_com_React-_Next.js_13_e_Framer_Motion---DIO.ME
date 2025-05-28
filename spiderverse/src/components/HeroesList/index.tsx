@@ -5,6 +5,7 @@ import { IHeroData } from "@/interfaces/heroes";
 import styles from "./heroesList.module.scss"
 import HeroesPicture from "../HeroesPicture";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface IProps { 
     heroes: IHeroData[]; // Replace 'any' with the actual type of your hero objects
@@ -36,7 +37,9 @@ export default function HeroesList({ heroes }: IProps) {
                         whileTap={{ scale: 0.8}}
                         transition={{ duration: 0.5 }}
                     >
-                        <HeroesPicture hero={hero} />
+                        <Link href={`/hero/${hero.id}`}>
+                            <HeroesPicture hero={hero} />
+                        </Link>
                     </motion.div>
                 ) )}
             </motion.section>
