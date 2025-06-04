@@ -4,6 +4,7 @@ import { IHeroData } from "@/interfaces/heroes";
 import HeroDetails from "../HeroDetails";
 import styles from "./carousel.module.scss";
 import { useEffect, useState } from "react";
+import HeroesPicture from "../HeroesPicture";
 
 interface IProps {
     heroes: IHeroData[];
@@ -25,11 +26,25 @@ export default function Carousel({ heroes, activeId } : IProps) {
     }, [heroes, activeIndex]);
 
 
+    const handleChangeActiveIndex = (newDirection: number) => {
+        setActiveIndex((prevActiveIndex) => prevActiveIndex + newDirection);
+    }
+
+    if (!visibleItem) {
+        return null;
+    }
+
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.carousel}>
-                    <div className={styles.wrapper}>Lista com os herois</div>
+                    <div className={styles.wrapper} onClick={() => handleChangeActiveIndex(1)}>
+                        {visibleItem?.map((item) => (
+                            <div key={item.id} className={styles.hero}>
+                                <HeroesPicture hero={item} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <div className={styles.details}>
